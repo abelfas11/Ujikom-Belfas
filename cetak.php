@@ -1,10 +1,5 @@
-<h1 class="mt-4">Laporan peminjaman</h1>
-<a href="cetak.php" target="_blank" class="btn btn-primary"><i class="fa fa-print"></i> Cetak</a>
-<div class="card">
-    <div class="card-body">
-    <div class="row">
-    <div class="col-md-12">
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+<h2 align = "center">Laporan peminjaman</h2>
+<table border="1"  width="100%" cellspacing="0" cellpadding="5" >
             <tr>
                 <th>No</th>
                 <th>User</th>
@@ -14,6 +9,7 @@
                 <th>status pengembalian</th>
             </tr>
             <?php
+            include 'koneksi.php';
             $i = 1;
             $query = mysqli_query($koneksi, "SELECT * FROM peminjaman LEFT JOIN user ON user.id_user = peminjaman.id_user LEFT JOIN buku ON buku.id_buku = peminjaman.id_buku");
 
@@ -32,18 +28,9 @@
                 }
             ?>
         </table>
-    </div>
-</div>
-    </div>
-</div>
-
-<style>
-    body {
-        background: linear-gradient(135deg, #E1F5FE, #FFEBEE);
-        font-family: 'Poppins', sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-    }
-</style>
+        <script>
+            window.print();
+            setTimeout(function (){
+                window.close()
+            })
+        </script>
