@@ -29,16 +29,10 @@
                         <td><?php echo $data['tanggal_pengembalian'];  ?> </td>
                         <td><?php echo $data['status_peminjaman'];  ?> </td>
                     </tr>
-                    <?php 
-                        if($data['status_peminjaman'] != 'dikembalikan' ) {
-                    ?>
                         <td>
                             <a href="?page=peminjaman_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-primary rounded-1">Change</a>
                             <a  href="?page=peminjaman_hapus&&id=<?php echo $data['id_peminjaman']; ?>" onclick="return confirm('Apakah anda yakin untuk menghapus data ini?');" class="btn btn-danger rounded-1"> Delete</a>
                         </td>
-                        <?php 
-                        }
-                        ?>
                     <?php
                 }
             ?>

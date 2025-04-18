@@ -66,6 +66,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Peminjaman
                             </a>
+                            <a class="nav-link" href="?page=pengembalian">
+                                <div class="sb-nav-link-icon"><i class="fas fa-undo"></i></div>
+                                Pengembalian
+                            </a>
                             <?php
                                 }
                                 ?>
