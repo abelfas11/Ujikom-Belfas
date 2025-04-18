@@ -84,7 +84,10 @@
                                     <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                                     Laporan Peminjaman
                                 </a>
-                                
+                                <a class="nav-link" href="?page=peminjaman_konfirmasi">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-check-circle"></i></div>
+                                     Konfirmasi Peminjaman
+                                </a>   
                             <?php 
                                 }                            
                             ?>

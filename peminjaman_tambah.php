@@ -11,17 +11,17 @@
                     $id_user = $_SESSION['user']['id_user'];
                     $tanggal_peminjaman = $_POST['tanggal_peminjaman'];
                     $tanggal_pengembalian = $_POST['tanggal_pengembalian'];
-                    $status_peminjaman = $_POST['status_peminjaman']; 
-                
-                    $query = mysqli_query($koneksi, "INSERT INTO peminjaman(id_buku, id_user, tanggal_peminjaman, tanggal_pengembalian, status_peminjaman) 
+                    $status_peminjaman = 'menunggu';  
+                    $query = mysqli_query($koneksi, "INSERT INTO peminjaman (id_buku, id_user, tanggal_peminjaman, tanggal_pengembalian, status_peminjaman) 
                     VALUES('$id_buku', '$id_user', '$tanggal_peminjaman', '$tanggal_pengembalian', '$status_peminjaman')");
-                
+
                     if ($query) {
-                        echo '<div class="alert alert-success">Tambah data berhasil</div>';
+                        echo '<div class="alert alert-success">Peminjaman berhasil ditambahkan dan menunggu persetujuan admin.</div>';
                     } else {
-                        echo '<div class="alert alert-danger">Tambah data gagal</div>';
+                        echo '<div class="alert alert-danger">Gagal menambahkan peminjaman.</div>';
                     }
                 }
+                
                 
             ?>
 
@@ -57,11 +57,12 @@
                 <div class="col-md-2">status_peminjaman</div>
                 <div class="col-md-8">
                 <select name="status_peminjaman" class="form-select w-25">
-                        <option value="dipinjam">Dipinjam</option>
-                        <option value="dikembalikan">Dikembalikan</option>
-                    </select>    
+                    <option value="dipinjam">Dipinjam</option>
+                    <option value="dikembalikan">Dikembalikan</option>
+                </select>    
                 </div>
             </div>
+
              <div class="row">
                   <div class="col-md-2">
                  </div>

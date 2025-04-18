@@ -15,9 +15,9 @@
 
 
                     if($query) {
-                        echo '<div class ="alert alert-success">tambah data berhasil</div>';
+                        echo '<div class ="alert alert-success">tambah ulasan berhasil</div>';
                     } else {
-                        echo '<div class ="alert alert-danger">tambah data gagal</div>';
+                        echo '<div class ="alert alert-danger">tambah ulasan gagal</div>';
                     }
                     
                 }

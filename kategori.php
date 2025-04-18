@@ -1,10 +1,19 @@
 <h1 class="mt-4">Kategori Buku</h1>
+<?php
+    if($_SESSION['user']['level'] != 'peminjam'){
+?>
 <a href="?page=kategori_add" class="btn btn-primary mb-3 rounded-1">+ Add Kategori</a>
+<?php
+    }
+?>
 <div class="card">
     <div class="card-body">
     <div class="row">
     <div class="col-md-12">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <?php
+                if($_SESSION['user']['level'] != 'peminjam'){
+            ?>
             <tr>
                 <th>No</th>
                 <th>Nama Kategori</th>
@@ -26,6 +35,28 @@
                     <?php
                 }
             ?>
+            <?php 
+                } else {
+            ?>
+                    <tr>
+                        <th style="width: 4%">No</th>
+                        <th class="position">Nama Kategori</th>
+                    </tr>
+                    <?php
+                    $i = 1;
+                        $query = mysqli_query($koneksi, "SELECT * FROM kategori");
+                        while($data = mysqli_fetch_array($query)){
+                            ?>
+                            <tr>
+                                <td><?php echo $i++; ?> </td>
+                                <td class="position"><?php echo $data['kategori'];  ?> </td>
+                            </tr>
+                            <?php
+                        }
+                    ?>
+            <?php
+                }
+            ?>
         </table>
     </div>
 </div>
@@ -40,5 +71,8 @@
         margin: 0;
         padding: 0;
         height: 100vh;
+    }
+    .position {
+        text-align: center;
     }
 </style>
