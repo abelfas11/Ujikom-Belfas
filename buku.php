@@ -1,6 +1,11 @@
 <h1 class="mt-4">Buku</h1>
-
+<?php
+   if($_SESSION['user']['level'] != 'peminjam'){
+?>
 <a href="?page=buku_tambah" class="btn btn-primary mb-3 rounded-1">+ Add buku</a>
+<?php 
+   }
+?>
 <div class="card">
     <div class="card-body">
     <div class="row">

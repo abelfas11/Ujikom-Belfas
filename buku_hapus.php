@@ -1,7 +1,6 @@
 <?php
 $id = $_GET['id'];
 
-// Cek dulu apakah buku masih dipinjam
 $cek = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE id_buku = $id");
 
 if (mysqli_num_rows($cek) > 0) {

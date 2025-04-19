@@ -1,7 +1,7 @@
 <h1 class="mt-4">Home</h1>
 <ol class="breadcrumb mb-4"></ol>
 
-<!-- Carousel Full Width -->
+
 <div class="row mb-4">
     <div class="col-md-12">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -33,7 +33,6 @@
     </div>
 </div>
 
-<!-- Statistik Cards -->
 <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card bg-light-blue text-white h-100">
@@ -87,7 +86,6 @@
     </div>
 </div>
 
-<!-- Custom Style -->
 <style>
     body {
         background: linear-gradient(135deg, #E1F5FE, #FFEBEE);
